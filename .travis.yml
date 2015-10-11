@@ -3,7 +3,6 @@ sudo: false
 c++:
  - "14882:2014"
 script:
-  - ./configure 
---prefix=$HOME/ircd
+  - ./configure --prefix=$HOME/ircd
   - make
   - make install
