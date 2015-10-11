@@ -6,4 +6,3 @@ script:
   - ./configure --prefix=$HOME/ircd
   - make
   - make install
-  - /home/travis/ircd/inspircd start
