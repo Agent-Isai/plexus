@@ -17,7 +17,7 @@
                                  #||#
 ##################################||####################################
 #                                                                      #
-#         This is an example of the config file for InspIRCd.          #
+#         This is an example of the config file for Plexus.          #
 #             Change the options to suit your network.                 #
 #                                                                      #
 #                                                                      #
@@ -29,7 +29,7 @@
 #                                                                      #
 #   Lines prefixed with READ THIS BIT, as shown above, are IMPORTANT   #
 #   lines, and you REALLY SHOULD READ THEM. Yes, THIS MEANS YOU. Even  #
-#   if you've configured InspIRCd before, these probably indicate      #
+#   if you've configured Plexus before, these probably indicate      #
 #   something new or different to this version and you SHOULD READ IT. #
 #                                                                      #
 ########################################################################
@@ -53,7 +53,7 @@
 #<include executable="/path/to/executable parameters">                #
 #                                                                     #
 # Executable include example:                                         #
-#<include executable="/usr/bin/wget -q -O - http://example.com/inspircd.conf">
+#<include executable="/usr/bin/wget -q -O - http://example.com/Plexus.conf">
 #                                                                     #
 
 
@@ -127,7 +127,7 @@
 #   |  _ <  __/ (_| | (_| |   | | | | | | \__ \ | |_) | | |_|_|       #
 #   |_| \_\___|\__,_|\__,_|   |_| |_| |_|_|___/ |____/|_|\__(_)       #
 #                                                                     #
-#  If you want to link servers to InspIRCd you must load the          #
+#  If you want to link servers to Plexus you must load the          #
 #  m_spanningtree.so module! Please see the modules list for          #
 #  information on how to load this module! If you do not load this    #
 #  module, server ports will NOT work!                                #
@@ -443,12 +443,12 @@
           opers="60">
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-# DNS SERVER -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
-# If these values are not defined, InspIRCd uses the default DNS resolver
+# If these values are not defined, Plexus uses the default DNS resolver
 # of your system.
 
 <dns
      # server: DNS server to use to attempt to resolve IP's to hostnames.
-     # in most cases, you won't need to change this, as inspircd will
+     # in most cases, you won't need to change this, as Plexus will
      # automatically detect the nameserver depending on /etc/resolv.conf
      # (or, on Windows, your set nameservers in the registry.)
      # Note that this must be an IP address and not a hostname, because
@@ -469,10 +469,10 @@
 # shell using shell scripts, perl scripts, etc... and to monitor the  #
 # ircd's state via cron jobs. If this is a relative path, it will be  #
 # relative to the configuration directory, and if it is not defined,  #
-# the default of 'inspircd.pid' is used.                              #
+# the default of 'Plexus.pid' is used.                              #
 #                                                                     #
 
-#<pid file="/path/to/inspircd.pid">
+#<pid file="/path/to/Plexus.pid">
 
 #-#-#-#-#-#-#-#-#-#-#-#-#- BANLIST LIMITS #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
@@ -633,7 +633,7 @@
 
              # limitsomaxconn: By default, somaxconn (see above) is limited to a
              # safe maximum value in the 2.0 branch for compatibility reasons.
-             # This setting can be used to disable this limit, forcing InspIRCd
+             # This setting can be used to disable this limit, forcing Plexus
              # to use the value specified above.
              limitsomaxconn="true"
 
@@ -714,19 +714,19 @@
           #  no        Do not show
           operspywhois="no"
 
-          # runasuser: If this is set, InspIRCd will attempt to switch
+          # runasuser: If this is set, Plexus will attempt to switch
           # to run as this user, which allows binding of ports under 1024.
           # You should NOT set this unless you are starting as root.
           # NOT SUPPORTED/NEEDED UNDER WINDOWS.
           #runasuser=""
 
-          # runasgroup: If this is set, InspIRCd will attempt to switch
+          # runasgroup: If this is set, Plexus will attempt to switch
           # to run as this group, which allows binding of ports under 1024.
           # You should NOT set this unless you are starting as root.
           # NOT SUPPORTED/NEEDED UNDER WINDOWS.
           #runasgroup=""
 
-          # restrictbannedusers: If this is set to yes, InspIRCd will not allow users
+          # restrictbannedusers: If this is set to yes, Plexus will not allow users
           # banned on a channel to change nickname or message channels they are
           # banned on.
           restrictbannedusers="yes"
@@ -746,7 +746,7 @@
 # on IRC, such as the maximum length of a channel name, and the       #
 # maximum length of a channel. Note that with the exception of the    #
 # identmax value all values given here are the exact values you would #
-# expect to see on IRC. This contrasts with the older InspIRCd        #
+# expect to see on IRC. This contrasts with the older Plexus        #
 # releases where these values would be one character shorter than     #
 # defined to account for a null terminator on the end of the text.    #
 #                                                                     #
@@ -792,7 +792,7 @@
 # Logging is covered with the <log> tag, which you may use to change
 # the behaviour of the logging of the IRCd.
 #
-# In InspIRCd as of 1.2, logging is pluggable and very extensible.
+# In Plexus as of 1.2, logging is pluggable and very extensible.
 # Different files can log the same thing, different 'types' of log can
 # go to different places, and modules can even extend the log tag
 # to do what they want.
@@ -947,10 +947,10 @@
 #   |_| \_\___|\__,_|\__,_|   |_| |_| |_|_|___/ |____/|_|\__(_)       #
 #                                                                     #
 # Well done, you've reached the end of the basic configuration, your  #
-# ircd should now start if you want to try it out! (./inspircd start) #
+# ircd should now start if you want to try it out! (./Plexus start) #
 #                                                                     #
 # We now suggest you read and edit modules.conf, as modules are what  #
-# provide almost all the features of InspIRCd. :)                     #
+# provide almost all the features of Plexus. :)                     #
 #                                                                     #
 # The default does nothing -- we include it for simplicity for you.   #
 <include file="conf/examples/modules.conf.example">
@@ -973,7 +973,7 @@
 
 #########################################################################
 #                                                                       #
-#                     - InspIRCd Development Team -                     #
-#                        http://www.inspircd.org                        #
+#                     - Plexus Development Team -                     #
+#                        http://www.Plexus.org                        #
 #                                                                       #
 #########################################################################

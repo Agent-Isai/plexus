@@ -86,8 +86,8 @@ const char* ExitCodes[] =
 		"Logfile error", /* 5 */
 		"POSIX fork failed", /* 6 */
 		"Bad commandline parameters", /* 7 */
-		"No ports could be bound", /* 8 */
-		"Can't write PID file", /* 9 */
+		"Ports failed to bind", /* 8 */
+		"Can't write PID file due to ownership of file", /* 9 */
 		"SocketEngine could not initialize", /* 10 */
 		"Refusing to start up as root", /* 11 */
 		"Found a <die> tag!", /* 12 */

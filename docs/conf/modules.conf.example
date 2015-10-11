@@ -10,7 +10,7 @@
 #                                                                     #
 #  By default, ALL modules are commented out. You must uncomment them #
 #  or add lines to your config to load modules. Please refer to       #
-#  http://wiki.inspircd.org/Modules for a list of modules and         #
+#  http://wiki.Plexus.org/Modules for a list of modules and         #
 #  each modules link for any additional conf tags they require.       #
 #                                                                     #
 #    ____                _   _____ _     _       ____  _ _   _        #
@@ -19,7 +19,7 @@
 #   |  _ <  __/ (_| | (_| |   | | | | | | \__ \ | |_) | | |_|_|       #
 #   |_| \_\___|\__,_|\__,_|   |_| |_| |_|_|___/ |____/|_|\__(_)       #
 #                                                                     #
-# To link servers to InspIRCd, you MUST load the m_spanningtree       #
+# To link servers to Plexus, you MUST load the m_spanningtree       #
 # module. If you don't do this, server links will NOT work at all.    #
 # This is by design, to allow for the implementation of other linking #
 # protocols in modules in the future. This module is at the bottom of #
@@ -313,7 +313,7 @@
 #                                                                     #
 # Optional - If you specify to use the m_censor module, then you must #
 # specify some censor tags. See also:                                 #
-# http://wiki.inspircd.org/Modules/censor                             #
+# http://wiki.Plexus.org/Modules/censor                             #
 #
 #<include file="conf/examples/censor.conf.example">
 
@@ -327,7 +327,7 @@
 # Optional - If you specify to use m_cgiirc, then you must specify one
 # or more cgihost tags which indicate authorised CGI:IRC servers which
 # will be connecting to your network, and an optional cgiirc tag.
-# For more information see: http://wiki.inspircd.org/Modules/cgiirc
+# For more information see: http://wiki.Plexus.org/Modules/cgiirc
 #
 # Set to yes if you want to notice opers when CGI:IRC clients connect.
 # <cgiirc opernotice="no">
@@ -509,8 +509,8 @@
 # The following methods are maintained for backwards compatibility;   #
 # they are slightly less secure, and always hide unresolved IPs.      #
 #                                                                     #
-#   compat-host    InspIRCd 1.2-compatible host-based cloaking.       #
-#   compat-ip      InspIRCd 1.2-compatible ip-always cloaking.        #
+#   compat-host    Plexus 1.2-compatible host-based cloaking.       #
+#   compat-ip      Plexus 1.2-compatible ip-always cloaking.        #
 #                                                                     #
 # If you use a compat cloaking mode then you must specify key1, key2, #
 # key3, key4; the values must be less than 0x80000000 and should be   #
@@ -734,7 +734,7 @@
 #<module name="m_dnsbl.so">                                           #
 #                                                                     #
 # For configuration options please see the wiki page for m_dnsbl at   #
-# http://wiki.inspircd.org/Modules/dnsbl                              #
+# http://wiki.Plexus.org/Modules/dnsbl                              #
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # Exempt channel operators module: Provides support for allowing      #
@@ -788,7 +788,7 @@
 # and run make install, then uncomment this module to enable it.
 # This module requires GeoIP to be installed on your system,
 # use your package manager to find the appropriate packages
-# or check the InspIRCd wiki page for this module.
+# or check the Plexus wiki page for this module.
 #<module name="m_geoip.so">
 #
 # The actual allow/ban actions are done by connect classes, not by the
@@ -830,7 +830,7 @@
 #                                                                     #
 # If you specify to use the m_helpop.so module, then specify below    #
 # the path to the helpop.conf file.                                   #
-#<include file="conf/examples/inspircd.helpop-full.example">
+#<include file="conf/examples/Plexus.helpop-full.example">
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # Hide chans module: Allows users to hide their channels list from non-
@@ -854,7 +854,7 @@
 #
 #-#-#-#-#-#-#-#-#-#-#-  HOSTCHANGE  CONFIGURATION  -#-#-#-#-#-#-#-#-#-#
 #                                                                     #
-# See http://wiki.inspircd.org/Modules/hostchange for help.           #
+# See http://wiki.Plexus.org/Modules/hostchange for help.           #
 #                                                                     #
 #<host suffix="invalid.org" separator="." prefix="">
 #<hostchange mask="*@42.theanswer.example.org" action="addnick">
@@ -863,7 +863,7 @@
 #<hostchange mask="localhost" ports="7000,7001,7005-7007" action="set" value="blahblah.foo">
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
-# httpd module: Provides HTTP server support for InspIRCd.
+# httpd module: Provides HTTP server support for Plexus.
 #<module name="m_httpd.so">
 #
 #-#-#-#-#-#-#-#-#-#-#-#-  HTTPD   CONFIGURATION  -#-#-#-#-#-#-#-#-#-#-#
@@ -995,7 +995,7 @@
 #           binddn="cn=Manager,dc=brainbox,dc=cc"                     #
 #           bindauth="mysecretpass"                                   #
 #           verbose="yes"                                             #
-#           host="$uid.$ou.inspircd.org">                             #
+#           host="$uid.$ou.Plexus.org">                             #
 #                                                                     #
 # <ldapwhitelist cidr="10.42.0.0/16">                                 #
 #                                                                     #
@@ -1042,7 +1042,7 @@
 # host allows you to change the displayed host of users connecting    #
 # from ldap. The string supplied takes formatters which are replaced  #
 # from the DN. For instance, if your DN looks like:                   #
-# uid=w00t,ou=people,dc=inspircd,dc=org, then the formatters uid, ou  #
+# uid=w00t,ou=people,dc=Plexus,dc=org, then the formatters uid, ou  #
 # and dc will be available to you. If a key is given multiple times   #
 # in the DN, the last appearance will take precedence.                #
 
@@ -1110,7 +1110,7 @@
 #-#-#-#-#-#-#-#-#-#-#-#- SQL CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_mssql.so is more complex than described here, see wiki for more   #
-# info http://wiki.inspircd.org/Modules/mssql                         #
+# info http://wiki.Plexus.org/Modules/mssql                         #
 #
 #<database module="mssql" name="db" user="user" pass="pass" host="localhost" id="db1">
 
@@ -1125,7 +1125,7 @@
 #-#-#-#-#-#-#-#-#-#-#-#- SQL CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_mysql.so is more complex than described here, see the wiki for    #
-# more: http://wiki.inspircd.org/Modules/mysql                        #
+# more: http://wiki.Plexus.org/Modules/mysql                        #
 #
 #<database module="mysql" name="mydb" user="myuser" pass="mypass" host="localhost" id="my_database2">
 
@@ -1278,7 +1278,7 @@
 #                                                                     #
 # processcolors - Allow color codes to be processed in the opermotd.  #
 #                 Read the comment above <connect:allowmotdcolors> in #
-#                 inspircd.conf.example for details.                  #
+#                 Plexus.conf.example for details.                  #
 #                                                                     #
 #<opermotd file="conf/examples/opermotd.txt.example" onoper="yes" processcolors="false">
 
@@ -1290,7 +1290,7 @@
 #-#-#-#-#-#-#-#-#-#-#   OVERRIDE CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_override.so is too complex it describe here, see the wiki:        #
-# http://wiki.inspircd.org/Modules/override                           #
+# http://wiki.Plexus.org/Modules/override                           #
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # Oper levels module: Gives each oper a level and prevents actions
@@ -1383,7 +1383,7 @@
 #-#-#-#-#-#-#-#-#-#-#-#- SQL CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_pgsql.so is more complex than described here, see the wiki for    #
-# more: http://wiki.inspircd.org/Modules/pgsql                        #
+# more: http://wiki.Plexus.org/Modules/pgsql                        #
 #
 #<database module="pgsql" name="mydb" user="myuser" pass="mypass" host="localhost" id="my_database" ssl="no">
 
@@ -1422,7 +1422,7 @@
 # Regular expression provider for glob or wildcard (?/*) matching.
 # You must have at least 1 provider loaded to use m_filter or m_rline
 # modules. This module has no additional requirements, as it uses the
-# matching already present in InspIRCd core.
+# matching already present in Plexus core.
 #<module name="m_regex_glob.so">
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
@@ -1696,7 +1696,7 @@
 #-#-#-#-#-#-#-#-#-#-#-  GNUTLS CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_ssl_gnutls.so is too complex to describe here, see the wiki:      #
-# http://wiki.inspircd.org/Modules/ssl_gnutls                         #
+# http://wiki.Plexus.org/Modules/ssl_gnutls                         #
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # SSL info module: Allows users to retrieve information about other
@@ -1723,7 +1723,7 @@
 #-#-#-#-#-#-#-#-#-#-#- OPENSSL CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_ssl_openssl.so is too complex to describe here, see the wiki:     #
-# http://wiki.inspircd.org/Modules/ssl_openssl                        #
+# http://wiki.Plexus.org/Modules/ssl_openssl                        #
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # Strip color module: Adds channel mode +S that strips mIRC color
@@ -1750,7 +1750,7 @@
 #-#-#-#-#-#-#-#-#-#-#-#- SQL CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_sqlite.so is more complex than described here, see the wiki for   #
-# more: http://wiki.inspircd.org/Modules/sqlite3                      #
+# more: http://wiki.Plexus.org/Modules/sqlite3                      #
 #
 #<database module="sqlite" hostname="/full/path/to/database.db" id="anytext">
 
@@ -1766,7 +1766,7 @@
 #-#-#-#-#-#-#-#-#-#-#- SQLAUTH CONFIGURATION   -#-#-#-#-#-#-#-#-#-#-#-#
 #                                                                     #
 # m_sqlauth.so is too complex to describe here, see the wiki:         #
-# http://wiki.inspircd.org/Modules/sqlauth                            #
+# http://wiki.Plexus.org/Modules/sqlauth                            #
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 # SQL oper module: Allows you to store oper credentials in an SQL table
@@ -1781,7 +1781,7 @@
 # dbid       - Database ID to use (see SQL modules).                  #
 # hash       - Hashing provider to use for password hashing.          #
 #                                                                     #
-# See also: http://wiki.inspircd.org/Modules/sqloper                  #
+# See also: http://wiki.Plexus.org/Modules/sqloper                  #
 #                                                                     #
 #<sqloper dbid="1" hash="md5">
 
@@ -1885,7 +1885,7 @@
 #   |  _ <  __/ (_| | (_| |   | | | | | | \__ \ | |_) | | |_|_|       #
 #   |_| \_\___|\__,_|\__,_|   |_| |_| |_|_|___/ |____/|_|\__(_)       #
 #                                                                     #
-# To link servers to InspIRCd, you MUST load the m_spanningtree       #
+# To link servers to Plexus, you MUST load the m_spanningtree       #
 # module. If you don't do this, server links will NOT work at all.    #
 # This is by design, to allow for the implementation of other linking #
 # protocols in modules in the future.                                 #
