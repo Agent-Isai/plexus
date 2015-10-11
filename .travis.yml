@@ -1,8 +1,6 @@
-language: c++
-sudo: false 
-c++:
- - "14882:2014"
-script:
-  - ./configure --prefix=$HOME/ircd
-  - make
-  - make install
+language: c
+script: ./configure --prefix=$HOME/ircd
+compiler:
+  - gcc
+  - clang
+  - g++
